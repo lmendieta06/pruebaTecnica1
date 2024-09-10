@@ -3,21 +3,30 @@
     position: relative;
     display: flex;
     justify-content: flex-start;
+    height: 100%;
   }
   
   /* Estilo para el botón del menú hamburguesa */
   .menu-toggle {
-    font-size: 30px;
+    position: fixed; /* Usa fixed para que el menú quede pegado a los bordes */
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100vh; /* Altura completa del viewport */
+    background-color: var(--colorContraste);    
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /*gura que el botón esté encima del menú */
     cursor: pointer;
-    padding: 10px;
-    color: #333;
-    background-color: #f8f9fa;
-    border: none;
-    border-radius: 5px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 1000; /* Asegura que el botón esté encima del menú */
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+  }
+
+  .menu-hamburguer{
+    width: 100%;
+    background-color: var(--colorContraste);    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
   }
   
   /* Estilo para el menú de navegación */
@@ -27,11 +36,12 @@
     left: 0;
     width: 250px;
     height: 100vh; /* Altura completa del viewport */
-    background-color: #343a40;
-    color: white;
+    background-color: var(--colorContraste);    color: white;
     transform: translateX(-100%); /* Inicialmente oculto */
     transition: transform 0.3s ease;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Sombra para dar efecto de profundidad */
+    cursor: pointer;
+
   }
   
   /* Mostrar el menú cuando está activo */
@@ -48,7 +58,7 @@
   
   /* Estilo para cada elemento de la lista */
   .nav-menu li {
-    border-bottom: 1px solid #495057;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.593);
   }
   
   /* Estilo para los enlaces */
@@ -61,6 +71,6 @@
   }
   
   .nav-menu a:hover {
-    background-color: #495057;
+    background-color: #adcdee;
   }
   

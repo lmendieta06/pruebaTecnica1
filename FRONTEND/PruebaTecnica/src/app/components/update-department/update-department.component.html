@@ -1,1 +1,22 @@
-<p>update-department works!</p>
+<section class="updateDepartment">
+    <div class="container">
+        <span class="close" (click)="closeModal()"> &times;</span>
+        <div class="containerForms">
+            <h1>NUEVO DEPARTAMENTO</h1>
+            <h2>Complete todos los campos solicitados</h2>
+            <div>
+                <div>
+                    <label for="departament">Nombre Departamento</label>
+                    <input type="text" placeholder="Nombre departamento" name="departament" required class="form-control" [(ngModel)]="nombre">
+                </div>
+                <div>
+                    <label for="codigo">Codigo del departamento</label>
+                    <input type="text" name="codigo"  placeholder="Codigo" required class="form-control" [(ngModel)]="codigo">
+                </div>
+                <div>
+                    <button type="submit" class="enviarForms" (click)="updateDepartment()">ACTUALIZAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import { connectionMongo } from "./config/db.js";
+import cors from "cors";
 // routes
 import departmentRouter from "./routes/department_routes.js";
 import employeeRouter from "./routes/employee_routes.js";
@@ -16,6 +17,8 @@ connectionMongo();
 
 // routes and request
 server.use(express.json());
+
+server.use(cors());
 // departments
 server.use("/departments", departmentRouter);
 // employees

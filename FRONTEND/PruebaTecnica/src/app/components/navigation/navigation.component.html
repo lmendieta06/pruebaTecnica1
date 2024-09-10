@@ -1,11 +1,14 @@
-<header class="header">
-    <div class="menu-toggle" (click)="toggleMenu()">
-      &#9776; <!-- Icono de menú hamburguesa -->
+<div class="header">
+  <div class="menu-toggle" (click)="toggleMenu()">
+    &#9776; <!-- Icono de menú hamburguesa -->
+  </div>
+  <nav class="nav-menu" [ngClass]="{'active': isMenuOpen}">
+    <div (click)="toggleMenu()" class="menu-hamburguer">
+      &#9776;
     </div>
-    <nav class="nav-menu" [ngClass]="{'active': isMenuOpen}">
-      <ul>
-        <li><a routerLink="/">Empleados</a></li>
-        <li><a routerLink="/departments">Departamentos</a></li>
-      </ul>
-    </nav>
-</header>
+    <ul>
+      <li><a routerLink="/">Empleados</a></li>
+      <li><a routerLink="/departments">Departamentos</a></li>
+    </ul>
+  </nav>
+</div>

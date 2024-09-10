@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 @Component({
@@ -9,9 +9,11 @@ import { RouterLink } from '@angular/router';
   styleUrl: './navigation.component.css'
 })
 export class NavigationComponent {
+  @Output() menuToggle = new EventEmitter<boolean>();
   isMenuOpen = false;
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+    this.menuToggle.emit(this.isMenuOpen);
   }
 }
