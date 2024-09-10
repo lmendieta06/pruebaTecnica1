@@ -21,7 +21,7 @@ export const postEmployee = async(req, res)=>{
 
 export const getEmployees = async(req, res)=>{
     try {
-        const employees = await employeeModel.find().populate('codigo');
+        const employees = await employeeModel.find().populate('codigoDepartamento');
 
         if(employees.length === 0){
             return res.status(201).json("No se encontraron empleados registrados");
