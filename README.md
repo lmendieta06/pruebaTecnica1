@@ -85,6 +85,7 @@ Este sistema ofrece las siguientes funcionalidades:
 ## Posibles Problemas
 
 - **Conexión a la Base de Datos**: Si la aplicación no se puede conectar a la base de datos, puede deberse a problemas con la **IP** del servidor de MongoDB. Asegúrate de que el servidor de MongoDB esté en funcionamiento y que la configuración de la red permita la conexión.
+- **Acceso a variables de entorno**: En caso de poseer otros problemas, se puede deber al acceso al archivo ".env" el cual almacena información de bases de datos y puertos.
 
 ## Ejecución
 
