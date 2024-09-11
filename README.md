@@ -19,8 +19,8 @@ Para poder ejecutar el proyecto, es necesario contar con:
 1. Clona el repositorio en tu máquina local:
 
     ```bash
-    git clone https://github.com/tuusuario/tu-repositorio.git
-    cd tu-repositorio
+    git clone https://github.com/lmendieta06/pruebaTecnica1.git
+    cd pruebaTecnica1
     ```
 
 ### Backend
