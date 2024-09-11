@@ -7,23 +7,24 @@
         <div>
           <div>
             <label for="nombre">Nombre</label>
-            <input type="text" placeholder="Nombre" name="nombre" required class="form-control" [(ngModel)]="nombre">
+            <input type="text" placeholder="Ingrese sus nombres" name="nombre" required class="form-control" [(ngModel)]="nombre">
           </div>
           <div>
             <label for="apellido1">Apellido 1</label>
-            <input type="text" placeholder="Apellido 1" name="apellido1" required class="form-control" [(ngModel)]="apellido1">
+            <input type="text" placeholder="Ingrese su primer apellido" name="apellido1" required class="form-control" [(ngModel)]="apellido1">
           </div>
           <div>
             <label for="apellido2">Apellido 2</label>
-            <input type="text" placeholder="Apellido 2" name="apellido2" required class="form-control" [(ngModel)]="apellido2">
+            <input type="text" placeholder="Ingrese su segundo apellido" name="apellido2" required class="form-control" [(ngModel)]="apellido2">
           </div>
           <div>
             <label for="codigo">Código</label>
-            <input type="number" placeholder="Código" name="codigo" required class="form-control" [(ngModel)]="codigo">
+            <input type="number" placeholder="Ingrese su código" name="codigo" required class="form-control" [(ngModel)]="codigo">
           </div>
           <div>
             <label for="codigoDepartament">Departamento</label>
             <select name="codigoDepartament" required class="form-control" [(ngModel)]="codigoDepartament">
+              <option value="" disabled>Seleccione una opción</option>
               <option *ngFor="let department of departments" [value]="department._id">
                 {{ department.nombre }}
               </option>
